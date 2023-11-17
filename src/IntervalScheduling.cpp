@@ -19,7 +19,8 @@ bool jobComparator(Job s1, Job s2) {
 }
 
 void printMaxJobs(vector<Job>& jobs) {
-  sort(jobs.begin(), jobs.end(), jobComparator); // sort jobs by earliest finish time
+  // sort jobs by earliest finish time
+  sort(jobs.begin(), jobs.end(), jobComparator);
 
   cout << "Maximum subset: \n";
 
@@ -30,7 +31,7 @@ void printMaxJobs(vector<Job>& jobs) {
   cout << "(" << jobs[curr].start << ", " << jobs[prev].finish << ")";
 
   for (curr = 1; curr < jobs.size(); curr++) {
-    if (jobs[curr].start >= jobs[prev].finish) { // check compatability
+    if (jobs[curr].start >= jobs[prev].finish) { // check compatibility
       cout << ", (" << jobs[curr].start << ", " << jobs[curr].finish << ")";
       prev = curr;
     }
