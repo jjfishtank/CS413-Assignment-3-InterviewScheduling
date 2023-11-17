@@ -8,3 +8,4 @@ Example input.txt:
 2,5
 1,3
 ```
+Number of jobs followed by job start, finish values.
